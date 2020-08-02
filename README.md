@@ -1,6 +1,9 @@
 # NeuralStyleTransfer-Android
 Neural Style Transfer android app using TFLite
 
+## Download
+Get the latest APK from [releases](https://github.com/ashar-7/NeuralStyleTransfer-Android/releases)
+
 ## Screenshot
 <img width=200 src="screenshot/main.png"/>
 

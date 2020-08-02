@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Style Transfer</string>
+    <string name="select_content_image">Select content image</string>
+    <string name="select_style_image">Select style image</string>
+    <string name="select">Select</string>
+    <string name="save">Save</string>
+    <string name="content_image_text">Input image</string>
+    <string name="style_image_text">Style image</string>
+    <string name="generate">Generate</string>
+    <string name="output_image_text">Output image</string>
+</resources>

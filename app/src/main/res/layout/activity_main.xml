@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/contentImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/placeholder_image"
+        android:layout_margin="16dp"
+        android:background="#212121"
+        app:layout_constraintEnd_toStartOf="@+id/styleImage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/selectContentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_photo"
+        android:backgroundTint="@color/colorPrimary"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/contentImage"
+        app:layout_constraintEnd_toEndOf="@id/contentImage" />
+
+    <TextView android:id="@+id/contentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/content_image_text"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="@id/contentImage"
+        app:layout_constraintEnd_toEndOf="@id/contentImage"
+        app:layout_constraintTop_toBottomOf="@id/contentImage"/>
+
+    <ImageView
+        android:id="@+id/styleImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/placeholder_image"
+        android:adjustViewBounds="true"
+        android:layout_margin="16dp"
+        android:background="#212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/contentImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/selectStyleImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_photo"
+        android:backgroundTint="@color/colorPrimary"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/styleImage"
+        app:layout_constraintEnd_toEndOf="@id/styleImage" />
+
+    <TextView android:id="@+id/styleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/style_image_text"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="@id/styleImage"
+        app:layout_constraintEnd_toEndOf="@id/styleImage"
+        app:layout_constraintTop_toBottomOf="@id/styleImage"/>
+
+    <ImageView
+        android:id="@+id/outputImage"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_margin="16dp"
+        android:background="#212121"
+        app:layout_constraintBottom_toTopOf="@id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generateButton"/>
+
+    <androidx.constraintlayout.widget.Barrier android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="contentTextView, styleTextView"
+        app:barrierDirection="bottom"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/generate"
+        app:layout_constraintTop_toBottomOf="@id/barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView android:id="@+id/outputTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/output_image_text"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        app:layout_constraintStart_toStartOf="@id/outputImage"
+        app:layout_constraintEnd_toEndOf="@id/outputImage"
+        app:layout_constraintTop_toBottomOf="@id/outputImage"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
